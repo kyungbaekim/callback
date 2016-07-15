@@ -1,0 +1,20 @@
+<div class='container'>
+	{{allUsers}}
+<a href="#/newAlgorithm"><button type="button" class="btn btn-primary">Add an algorithm</button></a>
+<h1>algorithms</h1>
+<table class='table'>
+	<tr>
+		<th>Answers</th>
+		<th>Views</th>
+		<th>Title</th>
+		<th>Category</th>
+		<th>Status</th>
+	</tr>
+	<tr ng-repeat='alg in allAlgorithms'>
+		<th></th>
+		<th></th>
+		<td><a href='#/algorithms/{{ alg._id }}'>{{ alg.title }}</a></td>
+		<td ng-bind='alg.category'></td>
+		<td ng-bind='(alg._user.first_name) + " " + (alg._user.last_name)'></td>
+	</tr>
+</div>
